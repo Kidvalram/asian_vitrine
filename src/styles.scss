@@ -1,1 +1,202 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face{
+    font-family: "AvenirNextRegular";
+    src: local("AvenirNextRegular"), url(./assets/fonts/avenir_next/AvenirNextCondensed-Regular.ttf) format("truetype");
+}
+
+@font-face{
+    font-family: "Wonton";
+    src: local("Wonton"), url(./assets/fonts/wonton/Wonton.ttf) format("truetype");
+}
+
+@font-face{
+    font-family: "Myriad-Regular";
+    src: local("Myriad-Regular"), url(./assets/fonts/myriad/Myriad-Regular.ttf) format("truetype");
+}
+
+.wow {
+    visibility: hidden;
+}
+  
+body {
+    font-family: "AvenirNextRegular";
+    color: black;
+    text-align: left;
+}
+
+.page-footer{
+    background-color:rgb(43, 43, 43); 
+    position: relative;
+}
+
+.md-form input[type='text']:focus:not([readonly]), input[type='tel']:focus:not([readonly]), input[type='email']:focus:not([readonly]), input[type='number']:focus:not([readonly]) {
+    box-shadow: 0 1px 0 0 #F6AD47!important;
+    border-bottom: 1px solid #F6AD47!important;
+}
+
+.md-form input[type='text']:focus:not([readonly]) + label, input[type='tel']:focus:not([readonly]) + label, input[type='email']:focus:not([readonly]) + label, input[type='number']:focus:not([readonly]) + label {
+    color: #F6AD47!important;
+}
+
+.md-form textarea.md-textarea:focus:not([readonly]) {
+    box-shadow: 0 1px 0 0 #F6AD47!important;
+    border-bottom: 1px solid #F6AD47!important;
+}
+
+.md-form textarea.md-textarea:focus:not([readonly]) + label {
+    color: #F6AD47!important;
+}
+
+.asian-letter{
+    font-family: "Wonton";
+}
+
+.title-letter{
+    font-family: "Myriad-Regular";
+    letter-spacing: 2px;
+    font-weight: bold;
+    color:white;
+}
+
+button.btn-primary{ 
+    background-color:#F6AD47!important;
+}
+
+#main-page{
+    visibility: hidden;
+}
+
+p, h1, h2, h3, h5, h4{
+    font-family: "AvenirNextRegular";
+}
+
+.btn.btn-primary.waves-effect.waves-light{ 
+    background:#F6AD47!important;
+}
+
+.btn-floating.btn-primary.waves-effect.waves-light{ 
+    background:#F6AD47!important;
+}
+
+.button-back{
+    top: -30px;
+    display: inline-block;       /* Display inline block */
+    text-align: center;          /* For button text center */
+    position: absolute;          /* Position absolute */
+    left: 50%;                   /* Move 50% from left */
+    transform: translateX(-50%);
+}
+
+.division{
+    border-left: 4px solid #F6AD47!important;
+    height: 80px;
+    top: 50px;
+    display: inline-block;       /* Display inline block */
+    text-align: center;          /* For button text center */
+    position: absolute;          /* Position absolute */
+    left: 50%;                   /* Move 50% from left */
+    transform: translateX(-50%);
+}
+
+#loading-navbar{
+    opacity: 0;
+}
+
+.img-gradient{
+    position:relative;
+    display:inline-block;
+}
+
+.img-gradient:after {
+    content:'';
+    position:absolute;
+    left:0; top:0;
+    width:100%; height:100%;
+    display:inline-block;
+    background: -moz-linear-gradient(top, rgba(0, 47, 75, 0.233) 0%, rgba(246, 173, 71, 0.5) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(246, 173, 71, 0.5)), color-stop(100%,rgba(0,47,75,0.5))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(0,47,75,0.233) 0%,rgba(246, 173, 71, 0.5) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(0,47,75,0.233) 0%,rgba(246, 173, 71, 0.5) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(0,47,75,0.233) 0%,rgba(246, 173, 71, 0.5) 100%); /* IE10+ */
+    background: linear-gradient(to bottom, rgba(0,47,75,0.233) 0%,rgba(246, 173, 71, 0.5) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F6AD47', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+}
+
+.img-gradient img{
+    display:block;
+}
+
+.bg_side_nav {
+    background-image: url(../src/assets/images/layout/header/main_mobile_bg.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.navbar {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(119, 118, 118)), to(rgba(77, 75, 75, 0.980)));
+    background-image: linear-gradient(180deg, rgba(119, 118, 118), rgba(77, 75, 75, 0.980));
+    background-position: 0px 0px, 50% 100%;
+    background-size: auto, cover;
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.5);
+}
+
+html,
+body,
+header,
+.view {
+    height: 100%;
+}
+
+#loading {
+    -webkit-animation: rotation 12s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+    from {
+            -webkit-transform: rotate(0deg);
+    }
+    to {
+            -webkit-transform: rotate(359deg);
+    }
+}
+
+.navbar .btn-group .dropdown-menu .dropdown-item:hover,
+.navbar .btn-group .dropdown-menu .dropdown-menu a:hover {
+    background-color: gray;
+}
+
+.navbar .nav-item .nav-link:hover { 
+    background-color: #F6AD47!important;
+} 
+  
+.navbar .nav-item .nav-link { 
+    background-color: transparent!important;
+} 
+
+.navbar .navbar-nav > li > a:hover { 
+    color: black!important;
+} 
+
+.navbar .navbar-nav > li .btn-group > a:hover { 
+    color: black!important;
+} 
+
+@media (min-width: 350px) {
+    
+    .navbar .navbar-nav .nav-item{
+        line-height: 50px;
+    }
+    
+    .navbar .navbar-nav .nav-item .dropdown-menu{
+        line-height: 30px;
+    }
+
+}
+
+@media (min-width: 1200px){
+    .fixed-sn main {
+        margin-left: 20% !important;
+        margin-right: 20% !important;
+    }
+    
+}

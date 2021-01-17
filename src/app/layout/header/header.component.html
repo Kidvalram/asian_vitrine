@@ -1,0 +1,129 @@
+<!--================ Navigation bar =================-->
+<!-- For lg and xl browsers-->
+<mat-toolbar >
+    <div class="webflow">
+      <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar grey d-none d-lg-block" style="padding: 0 0; margin: 0 0;">
+        <div class="navbar-container">
+          <a href="index.html" aria-current="page" class="brand-container w-nav-brand w--current">
+            <img src="assets/images/layout/header/asian_navbar_logo.png" loading="lazy" height="45" alt="">
+          </a>
+          <nav role="navigation" class="nav-menu w-nav-menu">
+            <div class="navbar-links"><a routerLink='/accueil' routerLinkActive="active" class="menu-navbar-link w-button padding-nav-link">ACCUEIL</a><a routerLink='/sommesnous' routerLinkActive="active" class="menu-navbar-link w-button padding-nav-link">QUI SOMMES-NOUS</a><a routerLink='/contacteznous' routerLinkActive="active" class="menu-navbar-link w-button padding-nav-link">CONTACT</a><a routerLink='/cartedefidelite' routerLinkActive="active" class="menu-navbar-link w-button padding-nav-link">CARTE DE FIDÉLITÉ</a></div>
+          </nav>
+          <!-- <div class="navbar-buttons-wrapper">
+            <div data-delay="0" data-w-id="af85f3a5-2049-84a1-7242-e9952249a18d" class="menu-navbar-dropdown w-dropdown">
+              <div class="navbar-menu-button w-dropdown-toggle" style="outline:none">
+                <div class="navbar-button-icon-wrapper"><img src="assets/images/layout/header/close.svg" height="20" alt="" class="navbar-button-icon-close"><img src="assets/images/layout/header/menu.svg" height="20" alt="" class="navbar-button-icon"></div>
+                <div class="navbar-button-text">PRODUITS</div>
+              </div>
+              <nav class="w-dropdown-list"></nav>
+            </div>
+          </div> -->
+        </div>
+        <div class="menu-navbar" style="height: 60px;">
+          <div class="submenu">
+            <div class="menu-navbar-links-wrapper"><a href="store-asie.html" class="menu-navbar-link w-button">ASIE</a><a href="store-caraibe.html" class="menu-navbar-link w-button">CARAÏBES</a><a href="store-inde.html" class="menu-navbar-link w-button">INDE</a><a href="store-afrique.html" class="menu-navbar-link w-button">AFRIQUE</a><a href="store-amerique.html" class="menu-navbar-link w-button">AMERIQUE</a></div>
+          </div>
+        </div>
+      </nav>
+  </div>
+  </mat-toolbar> 
+  
+  <!-- /.For lg and xl browsers-->
+  <!-- For sm and md browsers-->
+  <div class="hidden-sn navbar-mobile d-block d-lg-none pb-5 mb-4">
+    <!--Double navigation-->
+    
+    <!-- Navbar -->
+    <nav class="navbar fixed-top navbar-toggleable-md navbar-expand-lg double-nav">
+        <!-- SideNav slide-out button -->
+        <a (click)="sidenav.toggle(); onAnimationEvent();" mdbBtn color="" class="p-3 button-collapse"><mdb-icon fas icon="bars"></mdb-icon></a>
+  
+        <ul class="nav navbar-nav mx-auto" style="padding-right: 50px;">
+          <li class="nav-item">
+              <div class="brand-logo"></div><img src="assets/images/layout/header/asian_navbar_logo.png" loading="lazy" height="40" alt="">
+          </li>
+        </ul>
+    </nav>
+  
+    <!-- Sidebar navigation -->
+    <mdb-side-nav #sidenav class="bg_side_nav fixed" [fixed]="true">
+  
+      <mdb-navbar-brand>
+        <!-- Logo -->
+        <li>
+          <div class="logo-wrapper waves-light" style="height: 160px;">
+            <div class="webflow mt-5">
+              <div class="header-container">
+                  <div class="header-photo-container-mobile" [@fadeIn]="fadeIn">
+                    <img src="assets/images/layout/header/asian_mobile_main_logo.png" alt="" class="jumbotron_logo_mobile" >
+                    <img src="assets/images/layout/header/asian_mobile_main_flags_logo.png" alt="" class="jumbotron_flags_logo_mobile" >
+                  </div>  
+              </div>
+          </div>
+          </div>
+        </li>
+        <!--/. Logo -->
+      </mdb-navbar-brand>
+  
+      <links>
+        <!--Social-->
+        <li>
+          <ul class="social">
+            <li><a href="https://www.facebook.com/asianetcaraibes" [@flipInY]="flipInY" class="icons-sm pr-2"><img src="assets/images/layout/header/fb_mobile_icon.png" (click)="sidenav.hide()" alt="Facebook Button"></a></li>
+            <li><a href="https://www.instagram.com/asianetcaraibes/" [@flipInY]="flipInX" class="icons-sm pl-2 pr-2"><img src="assets/images/layout/header/inst_mobile_icon.png" (click)="sidenav.hide()" alt="Instagram Button"></a></li>
+            <li><a href="tel:024-089-2421" [@flipInY]="flipInY" class="icons-sm pl-2 pr-2"><img src="assets/images/layout/header/phone_mobile_icon.png" (click)="sidenav.hide()" alt="Phone Button"></a></li>
+            <li><a href="contactez-nous.html#send_email" [@flipInY]="flipInX" class="icons-sm pl-2 pr-2"><img src="assets/images/layout/header/mail_mobile_icon.png" (click)="sidenav.hide()" alt="Mail Button"></a></li>
+            <li><a href="contactez-nous.html#check_map" [@flipInY]="flipInY" class="icons-sm pl-2"><img src="assets/images/layout/header/map_mobile_icon.png" (click)="sidenav.hide()" alt="Map Button"></a></li>
+          </ul>
+        </li>
+        <!--/Social-->
+        <li>
+          <ul class="collapsible collapsible-accordion">
+            <li ><a class="collapsible-header waves-effect pr-5 mr-5" routerLink='/accueil' #rlaAccueil="routerLinkActive" routerLinkActive="active" (click)="sidenav.hide()" style="font-family: BebasNeue-Bold;"
+              [@pulse]="(rlaAccueil.isActive && pulse)" ><i class="fas"><img [src]="rlaAccueil.isActive ? accueilActiveIcon : accueilIcon" alt="Home Button"></i>ACCUEIL</a></li>
+            <li><a class="collapsible-header waves-effect pr-3 mr-3" (click)="sidenav.hide()" #rlaSommes="routerLinkActive" routerLink='/sommesnous' routerLinkActive="active" style="font-family: BebasNeue-Bold;"
+              [@pulse]="(rlaSommes.isActive && pulse)"><i class="fas"><img [src]="rlaSommes.isActive ? sommesActiveIcon : sommesIcon" alt="Us Button"></i>QUI SOMMES-NOUS</a></li>
+            <li><a class="collapsible-header waves-effect pr-5 mr-5" (click)="sidenav.hide()" #rlaContact="routerLinkActive" routerLink='/contacteznous' routerLinkActive="active" style="font-family: BebasNeue-Bold;"
+              [@pulse]="(rlaContact.isActive && pulse)"><i class="fas"><img [src]="rlaContact.isActive ? contactActiveIcon : contactIcon" alt="Contact Button"></i>CONTACT</a></li>
+            <li><a class="collapsible-header waves-effect pr-3 mr-3" (click)="sidenav.hide()" #rlaCarte="routerLinkActive" routerLink='/cartedefidelite' routerLinkActive="active" style="font-family: BebasNeue-Bold;"
+              [@pulse]="(rlaCarte.isActive && pulse)"><i class="far"><img [src]="rlaCarte.isActive ? carteActiveIcon : carteIcon" alt="Card Button"></i>CARTE DE FIDÉLITÉ</a></li>
+          </ul>
+        </li>
+        <ul class="social pb-n3 mb-n3"></ul>
+        <!-- Side navigation links -->
+        <!-- <li >
+          <ul class="collapsible collapsible-accordion">
+  
+            <mdb-accordion [multiple]="true" aria-multiselectable="false">
+  
+              <mdb-accordion-item>
+                <mdb-accordion-item-head mdbWavesEffect><a class="text-uppercase font-weight-bold" style="font-family: BebasNeue-Bold; color: #F6AD47">NOS PRODUITS</a>
+                </mdb-accordion-item-head>
+                <mdb-accordion-item-body>
+                  <ul>
+                    <li><a class="collapsible-header waves-effect" href="store-asie.html" style="font-family: BebasNeue-Bold;"><i class="fas fa-chevron-right amber-text"></i>ASIE</a></li>                  
+                    <li><a class="collapsible-header waves-effect" href="store-caraibe.html" style="font-family: BebasNeue-Bold;"><i class="fas fa-chevron-right amber-text"></i>CARAÏBES</a></li>
+                    <li><a class="collapsible-header waves-effect" href="store-inde.html" style="font-family: BebasNeue-Bold;"><i class="fas fa-chevron-right amber-text"></i>INDE</a></li>
+                    <li><a class="collapsible-header waves-effect" href="store-afrique.html" style="font-family: BebasNeue-Bold;"><i class="fas fa-chevron-right amber-text"></i>AFRIQUE</a></li>
+                    <li><a class="collapsible-header waves-effect" href="store-amerique.html" style="font-family: BebasNeue-Bold;"><i class="fas fa-chevron-right amber-text"></i>AMERIQUE</a></li>
+                  </ul>
+                </mdb-accordion-item-body>
+              </mdb-accordion-item>
+  
+            </mdb-accordion>
+          </ul>
+        </li> -->
+        <!--/. Side navigation links -->
+      </links>
+      <div class="sidenav-bg mask-strong"></div>
+    </mdb-side-nav>
+    <!--/. Sidebar navigation -->
+  
+  
+    <!-- /.Navbar -->
+  
+    <!--/.Double navigation-->
+  </div>
+  <!-- /.For sm and md browsers-->
+  <!--================ End Navigation bar =================-->

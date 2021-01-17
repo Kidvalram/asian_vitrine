@@ -1,0 +1,26 @@
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+  
+  .active{
+    background-color: transparent;
+    color: #F6AD47;
+  }
+  
+  .jumbotron_logo_mobile{
+    position: absolute;
+    width: 300px;
+    height: auto;
+  }
+  
+  .jumbotron_flags_logo_mobile{
+    position: absolute;
+    width: 300px;
+    height: auto;
+    animation: rotation 14s infinite linear;
+  }

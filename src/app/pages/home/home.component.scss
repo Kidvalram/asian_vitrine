@@ -1,0 +1,550 @@
+@import '~ng-uikit-pro-standard/assets/scss/core/colors';
+@import '~ng-uikit-pro-standard/assets/scss/core/variables';
+@import '~ng-uikit-pro-standard/assets/scss/core/variables-pro';
+@import '~ng-uikit-pro-standard/assets/scss/bootstrap/functions';
+@import '~ng-uikit-pro-standard/assets/scss/bootstrap/variables';
+@import '~ng-uikit-pro-standard/assets/scss/core/mixins';
+
+/* Size for logo */
+$main-logo-xl-size: 450px;
+$main-logo-lg-size: 420px;
+$main-logo-md-size: 270px;
+$main-logo-sm-size: 230px;
+$main-logo-xs-size: 170px;
+
+/* Size for leaf top */
+$leaf-top-xl-size: 400px;
+$leaf-top-lg-size: 450px;
+$leaf-top-md-size: 350px;
+$leaf-top-sm-size: 300px;
+$leaf-top-xs-size: 280px;
+
+/* Size for leaf buttom */
+$leaf-bottom-xl-size: 200px;
+$leaf-bottom-lg-size: 185px;
+$leaf-bottom-md-size: 195px;
+$leaf-bottom-sm-size: 170px;
+$leaf-bottom-xs-size: 125px;
+
+$leaf-padding-bottom-xl-size: -75px;
+$leaf-padding-bottom-lg-size: -65px;
+$leaf-padding-bottom-md-size: -40px;
+$leaf-padding-bottom-sm-size: -35px;
+$leaf-padding-bottom-xs-size: -35px;
+
+/* Size for categories */
+$category-xl-size: 170px;
+$category-lg-size: 155px;
+$category-md-size: 130px;
+$category-sm-size: 125px;
+$category-xs-size: 125px;
+
+/* Asian background size */
+$bg-asian-xl-size: 250px;
+$bg-asian-lg-size: 235px;
+$bg-asian-md-size: 220px;
+$bg-asian-sm-size: 215px;
+$bg-asian-xs-size: 215px;
+
+/* Caribean background size */
+$bg-caribean-xl-size: 110px;
+$bg-caribean-lg-size: 95px;
+$bg-caribean-md-size: 80px;
+$bg-caribean-sm-size: 75px;
+$bg-caribean-xs-size: 75px;
+
+/* Indian background size */
+$bg-indian-xl-size: 150px;
+$bg-indian-lg-size: 135px;
+$bg-indian-md-size: 120px;
+$bg-indian-sm-size: 115px;
+$bg-indian-xs-size: 115px;
+
+/* America background size */
+$bg-american-xl-size: 100px;
+$bg-american-lg-size: 95px;
+$bg-american-md-size: 80px;
+$bg-american-sm-size: 75px;
+$bg-american-xs-size: 75px;
+
+/* America background size */
+$bg-african-xl-size: 180px;
+$bg-african-lg-size: 165px;
+$bg-african-md-size: 150px;
+$bg-african-sm-size: 145px;
+$bg-african-xs-size: 145px;
+
+:host {
+   display: block;
+   position: relative;
+   width: 100%;
+   height: 100%;
+}
+
+#description-CEO{
+    background: url(../../../assets/images/pages/home/background_description.png) no-repeat center center; 
+    background-size: cover; 
+    position:relative; 
+    top:50px;
+}
+
+.background-leaf-bottom{
+    position: absolute;
+    top: $leaf-padding-bottom-xl-size;
+    left: 0%;
+
+    .img-leaf-bottom{
+        height: $leaf-bottom-xl-size;
+        width: auto;
+    }
+}
+
+
+
+.background-leaf-top{
+    top: 0%;
+    position: absolute;          /* Position absolute */
+    right: 0%;                   /* Move 50% from left */
+    width: $leaf-top-lg-size;
+    height: $leaf-top-lg-size;
+}
+
+.category{
+    position: relative;
+    text-align: center;
+
+    img{
+        position: relative;
+        height: auto;
+        width: $category-xl-size;
+        padding: 7px;
+    }
+
+    .text_category{
+        position: absolute;
+        visibility: visible;
+        top: 37%; left: 35px; 
+        font-size: 1.7rem; 
+        font-weight: bold;
+    }
+
+    #txt-top {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: $category-xl-size;
+        width: auto;
+    }
+
+    #txt-bottom {
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: $category-xl-size;
+        width: auto;
+    }
+
+    #asian-bg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: $bg-asian-xl-size;
+        width: auto;
+    }
+
+    #caribean-bg {
+        position: absolute;
+        top: 90%;
+        left: 80%;
+        transform: translate(-50%, -50%);
+        height: $bg-caribean-xl-size;
+        width: auto;
+    }
+
+    #indian-bg {
+        position: absolute;
+        top: 7%;
+        left: 55%;
+        transform: translate(-50%, -50%);
+        height: $bg-indian-xl-size;
+        width: auto;
+    }
+
+    #american-bg {
+        position: absolute;
+        top: 90%;
+        left: 65%;
+        transform: translate(-50%, -50%);
+        height: $bg-american-xl-size;
+        width: auto;
+    }
+
+    #african-bg {
+        position: absolute;
+        top: 62%;
+        left: 47%;
+        transform: translate(-50%, -50%);
+        height: $bg-african-xl-size;
+        width: auto;
+    }
+
+}
+
+.division{
+    border-left: 4px solid #F6AD47!important;
+    height: 80px;
+    top: 50px;
+    display: inline-block;       /* Display inline block */
+    text-align: center;          /* For button text center */
+    position: absolute;          /* Position absolute */
+    left: 50%;                   /* Move 50% from left */
+    transform: translateX(-50%);
+}
+
+.jumbotron_logo{
+    position: relative;
+    height: $main-logo-lg-size;
+    width: auto;
+}
+
+.jumbotron_flags_logo{
+    position: absolute;
+    height: $main-logo-lg-size;
+    width: auto;
+    animation: rotation 14s infinite linear;
+}
+
+.intro-2 {
+    background: url("../../../assets/images/pages/home/main_bg.jpg")no-repeat center center;
+    background-size: cover;
+}
+
+
+
+@include media-breakpoint-up(xs) { 
+
+    .navbar .navbar-nav .nav-item{
+        line-height: 50px;
+    }
+    
+    .navbar .navbar-nav .nav-item .dropdown-menu{
+        line-height: 30px;
+    }
+
+    .jumbotron_logo{
+        height: $main-logo-xs-size;
+    }
+    
+    .jumbotron_flags_logo{
+        height: $main-logo-xs-size;
+    }
+
+    .background-leaf-top{
+        width: $leaf-top-xs-size;
+        height: $leaf-top-xs-size;
+    }
+
+    .category{
+    
+        img{
+            width: $category-xs-size;
+        }
+
+        #txt-top {
+            height: $category-xs-size;
+        }
+    
+        #txt-bottom {
+           height: $category-xs-size;
+        }
+    
+        #asian-bg {
+            height: $bg-asian-xs-size;
+        }
+    
+        #caribean-bg {
+            height: $bg-caribean-xs-size;
+        }
+    
+        #indian-bg {
+            height: $bg-indian-xs-size;
+        }
+    
+        #american-bg {
+            height: $bg-american-xs-size;
+        }
+    
+        #african-bg {
+            height: $bg-african-xs-size;
+        }
+    }
+
+    .background-leaf-bottom{
+        top: $leaf-padding-bottom-xs-size;
+
+        .img-leaf-bottom{
+            height: $leaf-bottom-xs-size;
+        }
+    }
+}
+
+@include media-breakpoint-up(sm) { 
+
+    .navbar .navbar-nav .nav-item{
+        line-height: 50px;
+    }
+    .navbar .navbar-nav .nav-item .dropdown-menu{
+        line-height: 30px;
+    }
+
+    .jumbotron_logo{
+        height: $main-logo-sm-size;
+    }
+    
+    .jumbotron_flags_logo{
+        height: $main-logo-sm-size;
+    }
+
+    .background-leaf-top{
+        width: $leaf-top-sm-size;
+        height: $leaf-top-sm-size;
+    }
+
+    .category{
+    
+        img{
+            width: $category-sm-size;
+        }
+
+        #txt-top {
+            height: $category-sm-size;
+        }
+    
+        #txt-bottom {
+           height: $category-sm-size;
+        }
+    
+        #asian-bg {
+            height: $bg-asian-sm-size;
+        }
+    
+        #caribean-bg {
+            height: $bg-caribean-sm-size;
+        }
+    
+        #indian-bg {
+            height: $bg-indian-sm-size;
+        }
+    
+        #american-bg {
+            height: $bg-american-sm-size;
+        }
+    
+        #african-bg {
+            height: $bg-african-sm-size;
+        }
+    }
+
+    .background-leaf-bottom{
+        top: $leaf-padding-bottom-sm-size;
+        .img-leaf-bottom{
+            height: $leaf-bottom-sm-size;
+        }
+    }
+    
+ }
+
+@include media-breakpoint-up(md) { 
+    .navbar .navbar-nav .nav-item{
+        line-height: 50px;
+    }
+    
+    .navbar .navbar-nav .nav-item .dropdown-menu{
+        line-height: 30px;
+    }
+
+    .jumbotron_logo{
+        height: $main-logo-md-size;
+    }
+    
+    .jumbotron_flags_logo{
+        height: $main-logo-md-size;
+    }
+
+    .background-leaf-top{
+        width: $leaf-top-md-size;
+        height: $leaf-top-md-size;
+    }
+
+    .category{
+    
+        img{
+            width: $category-md-size;
+        }
+
+        #txt-top {
+            height: $category-md-size;
+        }
+    
+        #txt-bottom {
+           height: $category-md-size;
+        }
+    
+        #asian-bg {
+            height: $bg-asian-md-size;
+        }
+    
+        #caribean-bg {
+            height: $bg-caribean-md-size;
+        }
+    
+        #indian-bg {
+            height: $bg-indian-md-size;
+        }
+    
+        #american-bg {
+            height: $bg-american-md-size;
+        }
+    
+        #african-bg {
+            height: $bg-african-md-size;
+        }
+    }
+
+    .background-leaf-bottom{
+        top: $leaf-padding-bottom-md-size;
+
+        .img-leaf-bottom{
+            height: $leaf-bottom-md-size;
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .jumbotron_logo{
+        height: $main-logo-lg-size;
+    }
+    
+    .jumbotron_flags_logo{
+        height: $main-logo-lg-size;
+    }
+
+    .background-leaf-top{
+        width: $leaf-top-lg-size;
+        height: $leaf-top-lg-size;
+    }
+
+    .category{
+    
+        img{
+            width: $category-lg-size;
+        }
+
+        #txt-top {
+            height: $category-lg-size;
+        }
+    
+        #txt-bottom {
+           height: $category-lg-size;
+        }
+    
+        #asian-bg {
+            height: $bg-asian-lg-size;
+        }
+    
+        #caribean-bg {
+            height: $bg-caribean-lg-size;
+        }
+    
+        #indian-bg {
+            height: $bg-indian-lg-size;
+        }
+    
+        #american-bg {
+            height: $bg-american-lg-size;
+        }
+    
+        #african-bg {
+            height: $bg-african-lg-size;
+        }
+    }
+
+    .background-leaf-bottom{
+        top: $leaf-padding-bottom-lg-size;
+
+        .img-leaf-bottom{
+            height: $leaf-bottom-lg-size;
+        }
+    }
+ }
+
+@include media-breakpoint-up(xl) {
+    .fixed-sn main {
+        margin-left: 20% !important;
+        margin-right: 20% !important;
+    }
+
+    .intro-2 {
+        background: url("../../../assets/images/pages/home/main_bg.jpg")no-repeat center center;
+        background-size: cover;
+    }
+
+    .jumbotron_logo{
+        height: $main-logo-xl-size;
+    }
+    
+    .jumbotron_flags_logo{
+        height: $main-logo-xl-size;
+    }
+
+    .background-leaf-top{
+        width: $leaf-top-xl-size;
+        height: $leaf-top-xl-size;
+    }
+
+    .category{
+    
+        img{
+            width: $category-xl-size;
+        }
+
+        #txt-top {
+            height: $category-xl-size;
+        }
+    
+        #txt-bottom {
+           height: $category-xl-size;
+        }
+    
+        #asian-bg {
+            height: $bg-asian-xl-size;
+        }
+    
+        #caribean-bg {
+            height: $bg-caribean-xl-size;
+        }
+    
+        #indian-bg {
+            height: $bg-indian-xl-size;
+        }
+    
+        #american-bg {
+            height: $bg-american-xl-size;
+        }
+    
+        #african-bg {
+            height: $bg-african-xl-size;
+        }
+    }
+
+    .background-leaf-bottom{
+        top: $leaf-padding-bottom-xl-size;
+
+        .img-leaf-bottom{
+            height: $leaf-bottom-xl-size;
+        }
+    }
+ }

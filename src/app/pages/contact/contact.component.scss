@@ -1,0 +1,246 @@
+@import '~ng-uikit-pro-standard/assets/scss/core/colors';
+@import '~ng-uikit-pro-standard/assets/scss/core/variables';
+@import '~ng-uikit-pro-standard/assets/scss/core/variables-pro';
+@import '~ng-uikit-pro-standard/assets/scss/bootstrap/functions';
+@import '~ng-uikit-pro-standard/assets/scss/bootstrap/variables';
+@import '~ng-uikit-pro-standard/assets/scss/core/mixins';
+
+@import "~ng-uikit-pro-standard/assets/scss/core/colors";
+@import "~ng-uikit-pro-standard/assets/scss/core/variables";
+@import "~ng-uikit-pro-standard/assets/scss/core/variables-pro";
+
+@import "~ng-uikit-pro-standard/assets/scss/sections-pro/_contacts-pro.scss";
+
+/* Size for Images Introduction */
+$contact-img-xl-size: 220px;
+$contact-img-lg-size: 200px;
+
+/* Size for leaf layout */
+$contact-leaf-top-xl-size: 350px;
+$contact-leaf-top-lg-size: 320px;
+$contact-leaf-top-md-size: 250px;
+$contact-leaf-top-sm-size: 220px;
+$contact-leaf-top-xs-size: 200px;
+
+/* Size for leaf buttom */
+$contact-leaf-bottom-xl-size: 350px;
+$contact-leaf-bottom-lg-size: 320px;
+$contact-leaf-bottom-md-size: 250px;
+$contact-leaf-bottom-sm-size: 220px;
+$contact-leaf-bottom-xs-size: 200px;
+
+$contact-leaf-padding-bottom-xl-size: 12%;
+$contact-leaf-padding-bottom-lg-size: 12%;
+$contact-leaf-padding-bottom-md-size: 16%;
+$contact-leaf-padding-bottom-sm-size: 17%;
+$contact-leaf-padding-bottom-xs-size: 17%;
+
+:host {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.contact-background-leaf-top{
+    position: absolute;
+    left: 0px;
+
+    .img-leaf-top{
+        height: $contact-leaf-top-xl-size;
+        width: auto;
+    }
+}
+
+.contact-background-leaf-bottom{
+    position: absolute;
+    bottom: $contact-leaf-padding-bottom-xl-size;
+    right: -6%;
+
+    .img-leaf-bottom{
+        height: $contact-leaf-bottom-xl-size;
+        width: auto;
+    }
+}
+
+.contact-box-img{
+    position: relative;
+    text-align: center;
+
+    #contact_img_left{
+        position: absolute;
+        left: 0%;
+        height: $contact-img-xl-size;
+        width: auto;
+    }
+    
+    #contact_img_center{
+        position: absolute;
+        left: 25%;
+        height: $contact-img-xl-size;
+        width: auto;
+    }
+    
+    #contact_img_right{
+        position: absolute;
+        left: 50%;
+        height: $contact-img-xl-size;
+        width: auto;
+    }
+}
+
+.map-container-section {
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+
+.map-container-section iframe {
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+@include media-breakpoint-up(xs) { 
+    .contact-box-img{
+        height: 170px;
+        width: 340px;
+    }
+
+    .contact-background-leaf-top{
+        .img-leaf-top{
+            height: $contact-leaf-top-xs-size;
+        }
+        
+    }
+
+    .contact-background-leaf-bottom{
+        bottom: $contact-leaf-padding-bottom-xs-size;
+
+        .img-leaf-bottom{
+            height: $contact-leaf-bottom-xs-size;
+        }
+    }
+
+}
+
+@include media-breakpoint-up(sm) { 
+    .contact-box-img{
+        height: 200px;
+        width: 400px;
+    }
+
+    .contact-background-leaf-top{
+       
+        .img-leaf-top{
+            height: $contact-leaf-top-sm-size;
+        }
+        
+    }
+
+    .contact-background-leaf-bottom{
+        bottom: $contact-leaf-padding-bottom-sm-size;
+
+        .img-leaf-bottom{
+            height: $contact-leaf-bottom-sm-size;
+        }
+    }
+ }
+
+@include media-breakpoint-up(md) { 
+
+    .contact-box-img{
+        height: 210px;
+        width: 420px;
+    }
+
+    .contact-background-leaf-top{
+       
+        .img-leaf-top{
+            height: $contact-leaf-top-md-size;
+        }
+
+    }
+
+    .contact-background-leaf-bottom{
+        bottom: $contact-leaf-padding-bottom-md-size;
+
+        .img-leaf-bottom{
+            height: $contact-leaf-bottom-md-size;
+        }
+    }
+    
+}
+
+@include media-breakpoint-up(lg) {
+    
+    .contact-box-img{
+        
+        #contact_img_left{
+            height: $contact-img-lg-size;
+        }
+        
+        #contact_img_center{
+            height: $contact-img-lg-size;
+        }
+        
+        #contact_img_right{
+            height: $contact-img-lg-size;
+        }
+        
+    }
+
+    .contact-background-leaf-top{
+       
+        .img-leaf-top{
+            height: $contact-leaf-top-lg-size;
+        }
+    }
+
+    .contact-background-leaf-bottom{
+        bottom: $contact-leaf-padding-bottom-lg-size;
+
+        .img-leaf-bottom{
+            height: $contact-leaf-bottom-lg-size;
+        }
+    }
+    
+ }
+
+@include media-breakpoint-up(xl) {
+
+    .contact-box-img{
+        
+        #contact_img_left{
+            height: $contact-img-xl-size;
+        }
+        
+        #contact_img_center{
+            height: $contact-img-xl-size;
+        }
+        
+        #contact_img_right{
+            height: $contact-img-xl-size;
+        }
+        
+    }
+
+    .contact-background-leaf-top{
+       
+        .img-leaf-top{
+            height: $contact-leaf-top-xl-size;
+        }
+    }
+
+    .contact-background-leaf-bottom{
+        bottom: $contact-leaf-padding-bottom-xl-size;
+
+        .img-leaf-bottom{
+            height: $contact-leaf-bottom-xl-size;
+        }
+    }
+
+ }

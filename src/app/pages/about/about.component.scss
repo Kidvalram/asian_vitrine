@@ -1,0 +1,400 @@
+@import '~ng-uikit-pro-standard/assets/scss/core/colors';
+@import '~ng-uikit-pro-standard/assets/scss/core/variables';
+@import '~ng-uikit-pro-standard/assets/scss/core/variables-pro';
+@import '~ng-uikit-pro-standard/assets/scss/bootstrap/functions';
+@import '~ng-uikit-pro-standard/assets/scss/bootstrap/variables';
+@import '~ng-uikit-pro-standard/assets/scss/core/mixins';
+@import '~ng-uikit-pro-standard/assets/scss/core/bootstrap/rfs';
+
+/* Size for leaf layout */
+$about-leaf-top-xl-size: 250px;
+$about-leaf-top-lg-size: 240px;
+$about-leaf-top-md-size: 230px;
+$about-leaf-top-sm-size: 180px;
+$about-leaf-top-xs-size: 170px;
+
+/* Size for leaf buttom */
+$about-leaf-bottom-xl-size: 250px;
+$about-leaf-bottom-lg-size: 240px;
+$about-leaf-bottom-md-size: 230px;
+$about-leaf-bottom-sm-size: 200px;
+$about-leaf-bottom-xs-size: 190px;
+
+
+:host {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.about-background-leaf-top{
+    position: absolute;
+    bottom: -45%;
+    right: 0px;
+
+    .img-leaf-top{
+        height: $about-leaf-top-xl-size;
+        width: auto;
+    }
+}
+
+.about-background-leaf-bottom{
+    position: absolute;
+    top: 70%;
+    left: -5%;
+
+    .img-leaf-bottom{
+        height: $about-leaf-bottom-xl-size;
+        width: auto;
+    }
+}
+
+.about-logo-avatar{
+    position: absolute;
+    display:block;
+    left:0;
+    right:0;
+    top: 5%;
+    margin:auto;
+
+    .jumbotron_logo{
+        position: relative;
+        height: 100px;
+        width: auto;
+    }
+    
+    .jumbotron_flags_logo{
+        position: absolute;
+        height: 100px;
+        width: auto;
+        animation: rotation 14s infinite linear;
+    }
+}
+
+.about-button-card{
+    position: absolute;
+    display:block;
+    left:0;
+    right:0;
+    top: 85%;
+    margin:auto;
+}
+
+.about-background-leaf-top-mobile{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+
+    .img-leaf-top{
+        height: $about-leaf-top-sm-size;
+        width: auto;
+    }
+}
+
+.about-title-letter{
+    font-family: "Myriad-Regular";
+    letter-spacing: 2px;
+    font-weight: bold;
+    color:black;
+}
+
+.about-content{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    width: 800px;
+    transform: translate(-50%, -50%);
+    background-color: white;
+}
+
+.about-section{
+    position: relative;
+    margin-top: 220px;
+}
+
+.title {
+    @include responsive-font-size(4rem);
+    margin: 0 0 .5em;
+}
+
+.article {
+
+    background: white;
+    box-shadow: 0 0 10px rgba(black, .25);
+    padding: 20px 25px;
+  
+    &:not(:first-of-type) {
+      margin-top: 20px;
+    }
+  
+    &__title {
+      @include responsive-font-size(27px);
+      margin: 0;
+    }
+  
+    &__date {
+      padding-top: .25em;
+      @include responsive-font-size(12);
+      opacity: .75;
+      font-style: italic;
+    }
+  
+    &__content {
+      padding-top: .75em;
+      @include responsive-font-size(13);
+      margin: 0;
+      line-height: 1.4;
+    }
+}
+
+@include media-breakpoint-up(xs) { 
+    
+    .about-content-mobile{
+        img {
+            display: block;
+            max-width: 50%;
+            height: auto;
+            margin-left: auto;
+  margin-right: auto;
+        }
+    }
+    
+    .about-section{
+        margin-top: 0px;
+    }
+
+    .article {
+
+        &__content {
+          @include responsive-font-size(13);
+        }
+
+    }
+
+    .about-background-leaf-top-mobile{
+    
+        .img-leaf-top{
+            height: $about-leaf-top-xs-size;
+        }
+    }
+
+    .about-logo-avatar{
+
+        top: 2%;
+    
+        .jumbotron_logo{
+            height: 120px;
+        }
+        
+        .jumbotron_flags_logo{
+            height: 120px;
+            
+        }
+    }
+
+    .about-background-leaf-bottom{
+        top: 81%;
+        left: -20%;
+    
+        .img-leaf-bottom{
+            height: $about-leaf-bottom-xs-size;
+        }
+    }
+
+}
+
+@include media-breakpoint-up(sm) { 
+
+    .about-section{
+        margin-top: 0px;
+    }
+
+    .about-content{
+        top: 0%;
+        width: 0px;
+    }
+
+    .article {
+
+        &__content {
+          @include responsive-font-size(15);
+        }
+
+    }
+
+    .about-background-leaf-top-mobile{
+    
+        .img-leaf-top{
+            height: $about-leaf-top-sm-size;
+        }
+    }
+
+    .about-logo-avatar{
+       
+        top: 2%;
+    
+        .jumbotron_logo{
+            height: 150px;
+        }
+        
+        .jumbotron_flags_logo{
+            height: 150px;
+            
+        }
+    }
+
+    .about-background-leaf-bottom{
+        top: 75%;
+        left: -5%;
+    
+        .img-leaf-bottom{
+            height: $about-leaf-bottom-sm-size;
+        }
+    }
+
+}
+
+@include media-breakpoint-up(md) { 
+
+    .about-section{
+        margin-top: 220px;
+    }
+
+    .about-content{
+        top: 95%;
+        width: 570px;
+    }
+
+    .article {
+
+        &__content {
+          @include responsive-font-size(13);
+        }
+
+    }
+
+    .about-background-leaf-top{
+        bottom: -60%;
+    
+        .img-leaf-top{
+            height: $about-leaf-top-md-size;
+        }
+    }
+
+    .about-background-leaf-bottom{
+        top: 70%;
+        left: -5%;
+    
+        .img-leaf-bottom{
+            height: $about-leaf-bottom-md-size;
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+
+    .about-section{
+        margin-top: 0px;
+    }
+
+    .about-content{
+        top: 65%;
+        width: 720px;
+    }
+
+    .article {
+
+        &__content {
+          @include responsive-font-size(13);
+        }
+
+    }
+
+    .about-background-leaf-top{
+        bottom: -45%;
+    
+        .img-leaf-top{
+            height: $about-leaf-top-lg-size;
+        }
+    }
+
+    .about-background-leaf-bottom{
+        top: 70%;
+        left: -5%;
+    
+        .img-leaf-bottom{
+            height: $about-leaf-bottom-lg-size;
+        }
+    }
+
+}
+
+@include media-breakpoint-up(xl) {
+
+    .about-section{
+        margin-top: 0px;
+    }
+
+    .about-content{
+        top: 70%;
+        width: 800px;
+    }
+
+    .article {
+
+        &__content {
+          @include responsive-font-size(13);
+        }
+
+    }
+
+    .about-background-leaf-top{
+        bottom: -40%;
+    
+        .img-leaf-top{
+            height: $about-leaf-top-xl-size;
+        }
+    }
+
+    .about-background-leaf-bottom{
+        top: 70%;
+        left: -5%;
+    
+        .img-leaf-bottom{
+            height: $about-leaf-bottom-xl-size;
+        }
+    }
+
+}
+
+@media (min-width: 1600px) {
+    .about-content{
+        top: 70%;
+        width: 1000px;
+    }
+
+    .article {
+
+        &__content {
+          @include responsive-font-size(16);
+        }
+
+    }
+
+    .about-background-leaf-top{
+        bottom: -45%;
+    
+        .img-leaf-top{
+            height: $about-leaf-top-xl-size;
+        }
+    }
+
+    .about-background-leaf-top{
+    
+        .img-leaf-top{
+            height: $about-leaf-top-xl-size + 60px;
+        }
+    }
+
+}

@@ -1,0 +1,173 @@
+@import '~ng-uikit-pro-standard/assets/scss/core/colors';
+@import '~ng-uikit-pro-standard/assets/scss/core/variables';
+@import '~ng-uikit-pro-standard/assets/scss/core/variables-pro';
+@import '~ng-uikit-pro-standard/assets/scss/bootstrap/functions';
+@import '~ng-uikit-pro-standard/assets/scss/bootstrap/variables';
+@import '~ng-uikit-pro-standard/assets/scss/core/mixins';
+
+/* Size for leaf corner */
+$card-leaf-corner-xl-size: 160px;
+$card-leaf-corner-lg-size: 120px;
+$card-leaf-corner-md-size: 140px;
+$card-leaf-corner-sm-size: 120px;
+$card-leaf-corner-xs-size: 100px;
+
+/* Size for leaf buttom */
+$card-leaf-bottom-xl-size: 320px;
+$card-leaf-bottom-lg-size: 300px;
+$card-leaf-bottom-md-size: 280px;
+$card-leaf-bottom-sm-size: 240px;
+$card-leaf-bottom-xs-size: 220px;
+
+$card-leaf-padding-bottom-xl-size: 15%;
+$card-leaf-padding-bottom-lg-size: 15%;
+$card-leaf-padding-bottom-md-size: 17%;
+$card-leaf-padding-bottom-sm-size: 16%;
+$card-leaf-padding-bottom-xs-size: 16%;
+
+:host {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.card-divider {
+    width: 300px;
+    height: 5px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    border-radius: 25px;
+    background-color: #F6AD47;
+}
+
+.card-divider-mobile {
+    width: 200px;
+    height: 3px;
+    margin-top: 20px;
+    border-radius: 25px;
+    background-color: #F6AD47;
+}
+
+.card-background-leaf-corner{
+    position: absolute;
+    left: -10%;
+    top: -10%;
+
+    .img-leaf-top{
+        height: $card-leaf-corner-xl-size;
+        width: auto;
+    }
+}
+
+.card-background-leaf-bottom{
+    position: absolute;
+    bottom: $card-leaf-padding-bottom-xl-size;
+    left: 50%;
+
+    .img-leaf-bottom{
+        height: $card-leaf-bottom-xl-size;
+        width: auto;
+    }
+}
+
+@include media-breakpoint-up(xs) { 
+
+    .card-background-leaf-corner{
+        left: -4%;
+        top: -5%;
+
+        .img-leaf-top{
+            height: $card-leaf-corner-xs-size;
+        }
+    }
+
+    .card-background-leaf-bottom{
+        bottom: $card-leaf-padding-bottom-xs-size;
+        left: 70%;
+
+        .img-leaf-bottom{
+            height: $card-leaf-bottom-xs-size;
+        }
+    }
+    
+}
+
+@include media-breakpoint-up(sm) { 
+    .card-background-leaf-corner{
+        left: -7%;
+        top: -7%;
+
+        .img-leaf-top{
+            height: $card-leaf-corner-sm-size;
+        }
+    }
+
+    .card-background-leaf-bottom{
+        bottom: $card-leaf-padding-bottom-sm-size;
+
+        .img-leaf-bottom{
+            height: $card-leaf-bottom-sm-size;
+        }
+    }
+
+}
+
+@include media-breakpoint-up(md) { 
+    .card-background-leaf-corner{
+    
+        .img-leaf-top{
+            height: $card-leaf-corner-md-size;
+        }
+
+    }
+
+    .card-background-leaf-bottom{
+        bottom: $card-leaf-padding-bottom-md-size;
+
+        .img-leaf-bottom{
+            height: $card-leaf-bottom-md-size;
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+
+    .card-background-leaf-corner{
+    
+        .img-leaf-top{
+            height: $card-leaf-corner-lg-size;
+        }
+
+    }
+
+    .card-background-leaf-bottom{
+        bottom: $card-leaf-padding-bottom-lg-size;
+        left: 50%;
+
+        .img-leaf-bottom{
+            height: $card-leaf-bottom-lg-size;
+        }
+    }
+    
+}
+
+@include media-breakpoint-up(xl) {
+
+    .card-background-leaf-corner{
+    
+        .img-leaf-top{
+            height: $card-leaf-corner-xl-size;
+        }
+
+    }
+
+    .card-background-leaf-bottom{
+        bottom: $card-leaf-padding-bottom-xl-size;
+    
+        .img-leaf-bottom{
+            height: $card-leaf-bottom-xl-size;
+        }
+    }
+
+}

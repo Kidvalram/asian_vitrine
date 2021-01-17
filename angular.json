@@ -31,9 +31,26 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss",
+              "node_modules/@fortawesome/fontawesome-free/scss/solid.scss",
+              "node_modules/@fortawesome/fontawesome-free/scss/regular.scss",
+              "node_modules/@fortawesome/fontawesome-free/scss/brands.scss",
+              "node_modules/ng-uikit-pro-standard/assets/scss/bootstrap/bootstrap.scss",
+              "node_modules/ng-uikit-pro-standard/assets/scss/mdb.scss",
+              "node_modules/animate.css/animate.css",
+              "node_modules/aos/dist/aos.css",
+              "src/styles.scss",
+              "src/assets/css/amaurys-asian-et-caraibes.webflow.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/chart.js/dist/Chart.js",
+              "node_modules/easy-pie-chart/dist/easypiechart.js",
+              "node_modules/screenfull/dist/screenfull.js",
+              "node_modules/hammerjs/hammer.min.js",
+              "src/assets/js/webflow.js",
+              "src/assets/js/counter.js",
+              "node_modules/aos/dist/aos.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -122,6 +139,46 @@
             "production": {
               "devServerTarget": "asian:serve:production"
             }
+          }
+        }
+      }
+    },
+    "ng-uikit-pro-standard": {
+      "projectType": "library",
+      "root": "projects/ng-uikit-pro-standard",
+      "sourceRoot": "projects/ng-uikit-pro-standard/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ng-uikit-pro-standard/tsconfig.lib.json",
+            "project": "projects/ng-uikit-pro-standard/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ng-uikit-pro-standard/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng-uikit-pro-standard/src/test.ts",
+            "tsConfig": "projects/ng-uikit-pro-standard/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-uikit-pro-standard/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ng-uikit-pro-standard/tsconfig.lib.json",
+              "projects/ng-uikit-pro-standard/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         }
       }

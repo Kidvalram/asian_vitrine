@@ -16,6 +16,28 @@
 .wow {
     visibility: hidden;
 }
+
+.my-overlay {
+    left: 0 !important;
+    top: 0 !important;
+    z-index: 10000 !important;
+    width:  100vw !important;
+	height:  calc(100%) !important;
+	perspective:  1200px;
+    position: fixed;
+    cursor: pointer !important;
+    visibility: visible !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: wait !important;
+
+    
+}
+
+.my-overlay i.fa.fa-spinner.fa-spin, .spinner-big {
+    font-size: 100px !important;
+}
   
 body {
     font-family: "AvenirNextRegular";

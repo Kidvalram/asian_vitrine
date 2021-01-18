@@ -1,3 +1,70 @@
+@import '~ng-uikit-pro-standard/assets/scss/core/colors';
+@import '~ng-uikit-pro-standard/assets/scss/core/variables';
+@import '~ng-uikit-pro-standard/assets/scss/core/variables-pro';
+@import '~ng-uikit-pro-standard/assets/scss/bootstrap/functions';
+@import '~ng-uikit-pro-standard/assets/scss/bootstrap/variables';
+@import '~ng-uikit-pro-standard/assets/scss/core/mixins';
+
+
+$splash-background-leaf-right-top-xl-size: 32%;
+$splash-background-leaf-right-top-lg-size: 32%;
+$splash-background-leaf-right-top-md-size: 45%;
+$splash-background-leaf-right-top-sm-size: 50%;
+$splash-background-leaf-right-top-xs-size: 65%;
+
+$splash-background-leaf-right-bottom-xl-size: 24%;
+$splash-background-leaf-right-bottom-lg-size: 22%;
+$splash-background-leaf-right-bottom-md-size: 32%;
+$splash-background-leaf-right-bottom-sm-size: 35%;
+$splash-background-leaf-right-bottom-xs-size: 50%;
+
+$splash-background-leaf-left-top-xl-size: 37%;
+$splash-background-leaf-left-top-lg-size: 35%;
+$splash-background-leaf-left-top-md-size: 45%;
+$splash-background-leaf-left-top-sm-size: 45%;
+$splash-background-leaf-left-top-xs-size: 60%;
+
+$splash-background-leaf-left-bottom-xl-size: 37%;
+$splash-background-leaf-left-bottom-lg-size: 35%;
+$splash-background-leaf-left-bottom-md-size: 45%;
+$splash-background-leaf-left-bottom-sm-size: 45%;
+$splash-background-leaf-left-bottom-xs-size: 60%;
+
+$splash-background-leaf-top-xl-size: 37%;
+$splash-background-leaf-top-lg-size: 35%;
+$splash-background-leaf-top-md-size: 45%;
+$splash-background-leaf-top-sm-size: 45%;
+$splash-background-leaf-top-xs-size: 60%;
+
+$splash-loading-xl-size: 24%;
+$splash-loading-lg-size: 22%;
+$splash-loading-md-size: 22%;
+$splash-loading-sm-size: 22%;
+$splash-loading-xs-size: 22%;
+
+$splash-loading-xl-padding: 17%;
+$splash-loading-lg-padding: 17%;
+$splash-loading-md-padding: 25%;
+$splash-loading-sm-padding: 27%;
+$splash-loading-xs-padding: 30%;
+
+$splash-logo-xl-size: 36%;
+$splash-logo-lg-size: 36%;
+$splash-logo-md-size: 50%;
+$splash-logo-sm-size: 47%;
+$splash-logo-xs-size: 55%;
+
+$splash-logo-xl-padding: 5%;
+$splash-logo-lg-padding: 5%;
+$splash-logo-md-padding: 5%;
+$splash-logo-sm-padding: 6%;
+$splash-logo-xs-padding: 6%;
+
+$splash-spices-xl-size: 70%;
+$splash-spices-lg-size: 70%;
+$splash-spices-md-size: 95%;
+$splash-spices-sm-size: 90%;
+$splash-spices-xs-size: 100%;
 
 .router-wrapper  {
     position: relative;
@@ -7,8 +74,373 @@
 	perspective:  1200px;
 	transform-style:  preserve-3d;
 }
+
 :host {
     display: block;
     width: 100vw;
     height: 100vh;
 }
+
+.splash-screen {
+    width:  100vw;
+    height:  calc(100%);
+    z-index: 10000 !important;
+    position: fixed !important;
+    cursor: pointer !important;
+    visibility: visible !important;
+    transition: visibility 0s, opacity 0.4s linear;
+    cursor: none !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .background-left{
+        position: absolute !important;
+        left: 0%;
+        top: 0%;
+        height: 115%;
+        width: 55vw;
+        background-image: url("./../assets/images/layout/splash_screen/background_left.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .background-right{
+        position: absolute !important;
+        left: 50%;
+        top: 0%;
+        height: 115%;
+        width: 56vw;
+        background-image: url("./../assets/images/layout/splash_screen/background_right.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .background-leaf-right-top{
+        top: 0%;
+        position: absolute;          /* Position absolute */
+        right: 0%;                   /* Move 50% from left */
+        width: 35%;
+        height: auto;
+    }
+
+    .background-leaf-right-bottom{
+        top: 30%;
+        position: absolute;          /* Position absolute */
+        right: 0%;                   /* Move 50% from left */
+        width: 22%;
+        height: auto;
+    }
+
+    .background-leaf-left-top{
+        top: 0%;
+        position: absolute;          /* Position absolute */
+        left: 0%;                   /* Move 50% from left */
+        width: 35%;
+        height: auto;
+    }
+
+    .background-leaf-left-bottom{
+        bottom: -7%;
+        position: absolute;          /* Position absolute */
+        left: 0%;                   /* Move 50% from left */
+        width: 35%;
+        height: auto;
+    }
+
+    .background-leaf-top{
+        top: 0%;
+        position: absolute;          /* Position absolute */
+        left: 50%;                   /* Move 50% from left */
+        width: 35%;
+        height: auto;
+    }
+
+    .center-container{
+        position: absolute;
+        display:block;
+        left:0;
+        right:0;
+        margin:auto;
+
+        .loading{
+            position: absolute;
+            top: 50%; right: 50%;
+            padding-top: 12%;
+            max-width: 22%;
+            height: auto;
+            transform: translate(50%,-50%);
+        }
+
+        .logo{
+            position: absolute;
+            top: 50%; right: 50%;
+            padding-bottom: 5%;
+            max-width: 26%;
+            height: auto;
+            transform: translate(50%,-50%);
+        }
+
+        .spices{
+            position: absolute;
+            top: 50%; right: 50%;
+            max-width: 50%;
+            height: auto;
+            transform: translate(50%,-50%);
+
+        }
+    }
+
+}
+
+.my-overlay i.fa.fa-spinner.fa-spin, .spinner-big {
+    font-size: 100px !important;
+}
+
+@include media-breakpoint-up(xs) { 
+
+    .splash-screen {
+
+        .background-leaf-right-top{
+            width: $splash-background-leaf-right-top-xs-size;
+            top: 5%;
+        }
+    
+        .background-leaf-right-bottom{         
+            width: $splash-background-leaf-right-bottom-xs-size;
+            top: 60%;
+        }
+    
+        .background-leaf-left-top{
+            width: $splash-background-leaf-left-top-xs-size;
+        }
+    
+        .background-leaf-left-bottom{          
+            width: $splash-background-leaf-left-bottom-xs-size;
+        }
+    
+        .background-leaf-top{       
+            width: $splash-background-leaf-top-xs-size; 
+        }
+
+        .center-container{
+
+            .loading{
+               
+                padding-top: $splash-loading-xs-padding;
+                max-width: $splash-loading-xs-size;
+               
+            }
+    
+            .logo{
+                
+                padding-bottom: $splash-logo-xs-padding;
+                max-width: $splash-logo-xs-size;
+               
+            }
+    
+            .spices{
+                max-width: $splash-spices-xs-size;
+            }
+        }
+
+    }
+}
+
+@include media-breakpoint-up(sm) { 
+    
+    .splash-screen {
+
+        .background-leaf-right-top{
+            top: 0%;
+            width: $splash-background-leaf-right-top-sm-size;
+        }
+    
+        .background-leaf-right-bottom{  
+            top: 30%;       
+            width: $splash-background-leaf-right-bottom-sm-size;
+        }
+    
+        .background-leaf-left-top{
+            width: $splash-background-leaf-left-top-sm-size;
+        }
+    
+        .background-leaf-left-bottom{          
+            width: $splash-background-leaf-left-bottom-sm-size;
+        }
+    
+        .background-leaf-top{       
+            width: $splash-background-leaf-top-sm-size; 
+        }
+
+        .center-container{
+
+            .loading{
+               
+                padding-top: $splash-loading-sm-padding;
+                max-width: $splash-loading-sm-size;
+               
+            }
+    
+            .logo{
+                
+                padding-bottom: $splash-logo-sm-padding;
+                max-width: $splash-logo-sm-size;
+               
+            }
+    
+            .spices{
+                max-width: $splash-spices-sm-size;
+            }
+        }
+
+    }
+
+ }
+
+@include media-breakpoint-up(md) { 
+    
+    .splash-screen {
+
+        .background-leaf-right-top{
+            width: $splash-background-leaf-right-top-md-size;
+        }
+    
+        .background-leaf-right-bottom{         
+            width: $splash-background-leaf-right-bottom-md-size;
+        }
+    
+        .background-leaf-left-top{
+            width: $splash-background-leaf-left-top-md-size;
+        }
+    
+        .background-leaf-left-bottom{          
+            width: $splash-background-leaf-left-bottom-md-size;
+        }
+    
+        .background-leaf-top{       
+            width: $splash-background-leaf-top-md-size; 
+        }
+
+        .center-container{
+
+            .loading{
+               
+                padding-top: $splash-loading-md-padding;
+                max-width: $splash-loading-md-size;
+               
+            }
+    
+            .logo{
+                
+                padding-bottom: $splash-logo-md-padding;
+                max-width: $splash-logo-md-size;
+               
+            }
+    
+            .spices{
+                max-width: $splash-spices-md-size;
+            }
+        }
+
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    
+    .splash-screen {
+
+        .background-leaf-right-top{
+            width: $splash-background-leaf-right-top-lg-size;
+        }
+    
+        .background-leaf-right-bottom{         
+            width: $splash-background-leaf-right-bottom-lg-size;
+        }
+    
+        .background-leaf-left-top{
+            width: $splash-background-leaf-left-top-lg-size;
+        }
+    
+        .background-leaf-left-bottom{          
+            width: $splash-background-leaf-left-bottom-lg-size;
+        }
+    
+        .background-leaf-top{       
+            width: $splash-background-leaf-top-lg-size; 
+        }
+
+        .center-container{
+
+            .loading{
+               
+                padding-top: $splash-loading-lg-padding;
+                max-width: $splash-loading-lg-size;
+               
+            }
+    
+            .logo{
+                
+                padding-bottom: $splash-logo-lg-padding;
+                max-width: $splash-logo-lg-size;
+               
+            }
+    
+            .spices{
+                max-width: $splash-spices-lg-size;
+            }
+        }
+
+    }
+ }
+
+@include media-breakpoint-up(xl) {
+
+    .splash-screen {
+
+        .background-leaf-right-top{
+            width: $splash-background-leaf-right-top-xl-size;
+        }
+    
+        .background-leaf-right-bottom{         
+            width: $splash-background-leaf-right-bottom-xl-size;
+        }
+    
+        .background-leaf-left-top{
+            width: $splash-background-leaf-left-top-xl-size;
+        }
+    
+        .background-leaf-left-bottom{          
+            width: $splash-background-leaf-left-bottom-xl-size;
+        }
+    
+        .background-leaf-top{       
+            width: $splash-background-leaf-top-xl-size; 
+        }
+
+        .center-container{
+
+            .loading{
+               
+                padding-top: $splash-loading-xl-padding;
+                max-width: $splash-loading-xl-size;
+               
+            }
+    
+            .logo{
+                
+                padding-bottom: $splash-logo-xl-padding;
+                max-width: $splash-logo-xl-size;
+               
+            }
+    
+            .spices{
+                max-width: $splash-spices-xl-size;
+            }
+        }
+
+    }
+
+ }

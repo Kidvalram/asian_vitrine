@@ -4,13 +4,15 @@ import { MDBBootstrapModulesPro } from 'ng-uikit-pro-standard';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { NgxSpinnerModule } from "ngx-spinner";
 
 @NgModule({
   imports: [
     CommonModule,
     HomeRoutingModule,
     MDBBootstrapModulesPro.forRoot(),
-    FlexLayoutModule
+    FlexLayoutModule,
+    NgxSpinnerModule
   ],
   declarations: [HomeComponent]
 })

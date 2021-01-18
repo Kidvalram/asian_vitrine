@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MDBSpinningPreloader, MDBBootstrapModulesPro, ToastModule } from 'ng-uikit-pro-standard';
 import { LazyLoadImageModule} from 'ng-lazyload-image';
+import { NgxSpinnerModule } from "ngx-spinner";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,7 +25,8 @@ import { HeaderComponent } from './layout/header/header.component';
     HttpClientModule,
     ToastModule.forRoot(),
     MDBBootstrapModulesPro.forRoot(),
-    LazyLoadImageModule
+    LazyLoadImageModule,
+    NgxSpinnerModule
   ],
   providers: [MDBSpinningPreloader],
   bootstrap: [AppComponent],

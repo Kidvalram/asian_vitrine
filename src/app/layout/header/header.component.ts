@@ -30,19 +30,19 @@ export class HeaderComponent implements OnInit {
   carteIcon = "assets/images/layout/header/card_mobile_icon.png";
   
   constructor() {
-    this.loadDynmicallyScript();
+    //this.loadDynmicallyScript();
   } 
 
   ngOnInit(): void {
    
   }
 
-  public loadDynmicallyScript() {
-    var script = document.createElement('script');
-    script.src = "assets/js/webflow.js";
-    script.async =false;
-    document.head.appendChild(script);
-  }
+  //public loadDynmicallyScript() {
+  //  var script = document.createElement('script');
+  //  script.src = "assets/js/webflow.js";
+  //  script.async =false;
+  //  document.head.appendChild(script);
+  //}
 
   onAnimationEvent() {
     this.fadeIn = !this.fadeIn;

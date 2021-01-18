@@ -1,3 +1,9 @@
+<div class="my-overlay" *ngIf="showOverlay">
+  <ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "square-jelly-box" [fullScreen] = "true" style="position: relative;">
+    <p class="title-letter" > Chargement... </p>
+  </ngx-spinner>
+</div>
+
 <div class="scroll-count"  style="position: relative; overflow-x: hidden;">
 
   <!--================ Image Leaf =================-->
@@ -347,7 +353,7 @@
   <div class="page-footer pt-5"> 
   
     <div class="button-back">
-        <a type="button" class="btn-floating" data-aos="zoom-in" style="background-color: #F6AD47 !important;"><i class="fas fa-arrow-up" aria-hidden="true"></i></a>
+        <a type="button" class="btn-floating" (click)="onTop()" data-aos="zoom-in" style="background-color: #F6AD47 !important;"><i class="fas fa-arrow-up" aria-hidden="true"></i></a>
     </div>
 
     <div class="division" fxHide.lt-md></div>

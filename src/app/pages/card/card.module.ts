@@ -4,6 +4,7 @@ import { CardRoutingModule } from './card-routing.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MDBBootstrapModulesPro } from 'ng-uikit-pro-standard';
 import { CardComponent } from './card.component';
+import { NgxSpinnerModule } from "ngx-spinner";
 
 @NgModule({
   declarations: [ CardComponent ],
@@ -11,7 +12,8 @@ import { CardComponent } from './card.component';
     CommonModule,
     CardRoutingModule,
     MDBBootstrapModulesPro.forRoot(),
-    FlexLayoutModule
+    FlexLayoutModule,
+    NgxSpinnerModule
   ]
 })
 export class CardModule { }

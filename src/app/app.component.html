@@ -1,3 +1,19 @@
+<div class="splash-screen mt-n4" *ngIf="showOverlay">
+  <div class="background-left" [@slideOutBackgroundLeft]="slideOutBackgroundLeft"></div>
+  <div class="background-right" [@slideOutBackgroundRight]="slideOutBackgroundRight"></div>
+  <div class="center-container" [@fadeOutContainer]="fadeOutContainer">
+    <img class="spices" src="assets/images/layout/splash_screen/spices.png">
+    <img class="logo" src="assets/images/layout/splash_screen/logo.png">
+    <div class="loading">
+      <ngx-spinner style="position: relative;"[fullScreen] = "false" bdColor = "rgba(0, 0, 0, 0)" size = "medium" type = "ball-spin-fade"></ngx-spinner>
+    </div>
+  </div>
+  <img class="background-leaf-right-top" [@slideOutLeafRightTop]="slideOutLeafRightTop" src="assets/images/layout/splash_screen/leaf_right_top.png"> 
+  <img class="background-leaf-right-bottom" [@slideOutLeafRightBottom]="slideOutLeafRightBottom" src="assets/images/layout/splash_screen/leaf_right_bottom.png"> 
+  <img class="background-leaf-left-bottom" [@slideOutLeafLeftBottom]="slideOutLeafLeftBottom" src="assets/images/layout/splash_screen/leaf_left_bottom.png"> 
+  <img class="background-leaf-left-top" [@slideOutLeafLeftTop]="slideOutLeafLeftTop"src="assets/images/layout/splash_screen/leaf_left_top.png"> 
+  <img class="background-leaf-top" [@slideOutLeafTop]="slideOutLeafTop" src="assets/images/layout/splash_screen/leaf_top.png"> 
+</div>
 <app-header> </app-header>
 <div class="router-wrapper mt-n3" [@rotateCubeToTop]="getState(o)">
   <router-outlet #o="outlet" > </router-outlet>
